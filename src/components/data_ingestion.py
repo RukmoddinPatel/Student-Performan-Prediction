@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 
 from src.exception import CustomException
 from src.logger import logging
-from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformation,DataTransformationConfig
+from src.components.model_trainer import ModelTrainer,ModelTrainerConfig
 
 # Configuration dataclass for paths
 @dataclass
@@ -59,11 +60,16 @@ if __name__ == "__main__":
 
         # Data Transformation
         data_transformation = DataTransformation()
-        train_arr, test_arr, _ = data_transformation.initiate_data_transformation(train_data, test_data)
+        train_arr, test_arr, preprocessor_path = data_transformation.initiate_data_transformation(train_data, test_data)
 
         logging.info("Data transformation pipeline finished successfully.")
         print("✅ Pipeline completed: Data ingestion and transformation are done.")
 
+        # Model Training
+        modeltrainer = ModelTrainer()
+        r2_score = modeltrainer.initiate_model_trainer(train_arr, test_arr, preprocessor_path)
+        print(f"✅ Model trained successfully with R2 score: {r2_score}")
+
     except Exception as e:
         logging.error("Pipeline execution failed.")
-        raise e
+        raise CustomException(e, sys)
