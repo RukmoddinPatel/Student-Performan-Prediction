@@ -54,42 +54,42 @@ Educational institutions need a way to identify students who are likely to under
 ## ✅ **Project Architecture**
 
 ---
-student-performance-prediction/
-│
-├── artifacts/                     # Stores trained models and preprocessor
-│   ├── data.csv                   # Raw dataset
-│   ├── train.csv                  # Training data
-│   ├── test.csv                   # Testing data
-│   └── model.pkl                  # Final trained model
-│
-├── notebook/                      # EDA and experimentation notebooks
-│   └── student_performance.ipynb
-│
-├── src/                           # Core ML pipeline
-│   ├── components/
-│   │   ├── data_ingestion.py      # Loads data, splits into train/test
-│   │   ├── data_transformation.py # Handles feature engineering & preprocessing
-│   │   └── model_trainer.py       # Trains multiple ML models and saves best
-│   │
-│   ├── pipeline/
-│   │   ├── train_pipeline.py      # Executes full training pipeline
-│   │   └── predict_pipeline.py    # Handles prediction with saved model
-│   │
-│   ├── utils.py                   # Common utility functions
-│   ├── logger.py                  # Centralized logging
-│   └── exception.py               # Custom exception handling
-│
-├── templates/                     # HTML templates for Flask app
-│   ├── home.html
-│   └── index.html
-│
-├── static/                        # (Optional) CSS/JS files for Flask app
-│
-├── app.py                         # Flask application for deployment
-├── Dockerfile                     # Docker container configuration
-├── requirements.txt               # Python dependencies
-├── setup.py                       # Package setup
-└── README.md                      # Project documentation
+-student-performance-prediction/
+-│
+-├── artifacts/                     # Stores trained models and preprocessor
+-│   ├── data.csv                   # Raw dataset
+-│   ├── train.csv                  # Training data
+-│   ├── test.csv                   # Testing data
+-│   └── model.pkl                  # Final trained model
+-│
+-├── notebook/                      # EDA and experimentation notebooks
+-│   └── student_performance.ipynb
+-│
+-├── src/                           # Core ML pipeline
+-│   ├── components/
+-│   │   ├── data_ingestion.py      # Loads data, splits into train/test
+-│   │   ├── data_transformation.py # Handles feature engineering & preprocessing
+-│   │   └── model_trainer.py       # Trains multiple ML models and saves best
+-│   │
+-│   ├── pipeline/
+-│   │   ├── train_pipeline.py      # Executes full training pipeline
+-│   │   └── predict_pipeline.py    # Handles prediction with saved model
+-|   │
+-│   ├── utils.py                   # Common utility functions
+-│   ├── logger.py                  # Centralized logging
+-│   └── exception.py               # Custom exception handling
+-│
+-├── templates/                     # HTML templates for Flask app
+-│   ├── home.html
+-│   └── index.html
+-│
+-├── static/                        # (Optional) CSS/JS files for Flask app
+-│
+-├── app.py                         # Flask application for deployment
+-├── Dockerfile                     # Docker container configuration
+-├── requirements.txt               # Python dependencies
+-├── setup.py                       # Package setup
+-└── README.md                      # Project documentation
 
 
 
