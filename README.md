@@ -53,6 +53,8 @@ Educational institutions need a way to identify students who are likely to under
 
 ## 📂 Project Structure
 
+
+```
 student-performance-prediction/
 │
 ├── artifacts/                     # Stores trained models and preprocessor
@@ -90,7 +92,8 @@ student-performance-prediction/
 ├── setup.py                       # Package setup
 └── README.md                      # Project documentation
 
-
+```
+---
 
 ## ✅ **Dataset Information**
 - **Source:** Kaggle - Student Performance Dataset
